@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NCC — a community-driven Solana meme project. The Chud has arrived.">
+  <title>NCC — The Chud Has Arrived</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f5f1e8;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, 92%); margin: auto; }
+
+    nav {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(8,8,8,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #222;
+    }
+    .nav-inner {
+      min-height: 68px; display: flex; align-items: center;
+      justify-content: space-between; gap: 20px;
+    }
+    .logo { font-size: 25px; font-weight: 900; letter-spacing: 2px; }
+    .logo span { color: #f4ae22; }
+    .nav-links { display: flex; gap: 24px; font-size: 14px; color: #c9c4b9; }
+    .nav-links a:hover { color: #fff; }
+
+    .hero {
+      padding: 55px 0 80px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 15%, rgba(244,174,34,.15), transparent 35%),
+        #080808;
+    }
+    .hero img {
+      width: 100%; max-height: 520px; object-fit: cover;
+      border-radius: 22px; border: 1px solid #2b2b2b;
+      box-shadow: 0 25px 80px rgba(0,0,0,.55);
+    }
+    .eyebrow {
+      margin-top: 34px; color: #f4ae22; font-weight: 800;
+      letter-spacing: 3px; font-size: 13px;
+    }
+    h1 {
+      font-size: clamp(48px, 9vw, 104px);
+      line-height: .95; margin: 12px 0 18px; font-weight: 1000;
+      letter-spacing: -4px;
+    }
+    .hero p { max-width: 680px; margin: auto; color: #bdb8ad; font-size: 18px; }
+    .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+    .btn {
+      padding: 13px 22px; border-radius: 999px; font-weight: 900;
+      border: 1px solid #333; background: #151515;
+      transition: .2s transform, .2s background;
+    }
+    .btn:hover { transform: translateY(-2px); background: #222; }
+    .btn.primary { background: #f4ae22; color: #111; border-color: #f4ae22; }
+    .btn.primary:hover { background: #ffc34d; }
+
+    section { padding: 82px 0; border-top: 1px solid #1c1c1c; }
+    .section-title { font-size: 40px; margin-bottom: 14px; }
+    .section-sub { color: #a7a298; max-width: 700px; margin-bottom: 35px; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: #101010; border: 1px solid #252525; border-radius: 18px;
+      padding: 25px;
+    }
+    .card h3 { margin-bottom: 9px; font-size: 20px; }
+    .card p { color: #aaa59b; }
+    .icon { font-size: 28px; margin-bottom: 10px; }
+
+    .story {
+      font-size: 21px; color: #d3cec4; max-width: 850px;
+    }
+    .story strong { color: #fff; }
+
+    .roadmap { display: grid; gap: 14px; }
+    .phase {
+      display: grid; grid-template-columns: 145px 1fr; gap: 20px;
+      padding: 22px; border: 1px solid #252525; border-radius: 16px;
+      background: #101010;
+    }
+    .phase b { color: #f4ae22; }
+    .phase p { color: #aaa59b; }
+
+    .community {
+      text-align: center; padding: 55px 25px; border-radius: 22px;
+      background: linear-gradient(135deg, #14110a, #0f0f0f);
+      border: 1px solid #3a2b0d;
+    }
+    .community h2 { font-size: 42px; margin-bottom: 10px; }
+    .community p { color: #bcb6aa; max-width: 650px; margin: 0 auto; }
+
+    .contract {
+      margin-top: 25px; padding: 16px; border: 1px dashed #3b3b3b;
+      border-radius: 12px; color: #aaa59b; overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    footer { padding: 35px 0 50px; color: #77736c; text-align: center; font-size: 13px; }
+    .disclaimer { max-width: 760px; margin: 15px auto 0; }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      .phase { grid-template-columns: 1fr; gap: 5px; }
+      h1 { letter-spacing: -2px; }
+      .hero { padding-top: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#"><span>$</span>NCC</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#community">Community</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="assets/ncc-banner.png" alt="NCC — The Chud Has Arrived">
+    <div class="eyebrow">$NCC • SOLANA • COMMUNITY MEME</div>
+    <h1>THE CHUD<br>HAS ARRIVED.</h1>
+    <p>
+      Big fries. Bigger dreams. NCC is a community-driven Solana meme project
+      building from zero — one meme, one holder, and one community member at a time.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://pump.fun/coin/6kbL8m45LzePcPJkiAfTWi4KqGVjmHyQhSE45SJQpump" target="_blank" rel="noopener">Buy $NCC</a>
+      <a class="btn" href="https://t.me/niggachudcoin" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn" href="https://x.com/niggachudcoin" target="_blank" rel="noopener">X / Twitter</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="section-title">What is NCC?</h2>
+    <p class="section-sub">A meme, a community, and a brand being built in public.</p>
+    <p class="story">
+      <strong>NCC started with a simple idea: build a meme from zero and turn it into a community.</strong>
+      Built on Solana, NCC combines internet culture, memes, and the unmistakable Chud identity
+      into one community-driven project. There is no pretending we started big. We're starting small,
+      building publicly, and letting the community shape where NCC goes next.
+      <br><br>
+      <strong>From zero → community → brand. 🗿</strong>
+    </p>
+
+    <div class="grid" style="margin-top:35px;">
+      <div class="card">
+        <div class="icon">🗿</div>
+        <h3>Community</h3>
+        <p>Build a real community around the meme, not artificial engagement.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🍟</div>
+        <h3>Memes</h3>
+        <p>Consistent visual content, Chud lore, and internet-native culture.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Solana</h3>
+        <p>Fast, low-cost blockchain rails for the NCC community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="token">
+  <div class="wrap">
+    <h2 class="section-title">Token</h2>
+    <p class="section-sub">The official NCC token lives on Solana.</p>
+    <div class="card">
+      <h3>$NCC</h3>
+      <p>Token: NCC</p>
+      <div class="contract">
+        Contract: 6kbL8m45LzePcPJkiAfTWi4KqGVjmHyQhSE45SJQpump
+      </div>
+      <div class="buttons" style="justify-content:flex-start;">
+        <a class="btn primary" href="https://pump.fun/coin/6kbL8m45LzePcPJkiAfTWi4KqGVjmHyQhSE45SJQpump" target="_blank" rel="noopener">Open on Pump.fun</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <h2 class="section-title">Roadmap</h2>
+    <p class="section-sub">No fake promises. Just a simple path: community first, then scale.</p>
+    <div class="roadmap">
+      <div class="phase"><b>PHASE 1</b><p><strong>Foundation:</strong> X presence, Telegram community, daily meme content, and the first wave of real holders.</p></div>
+      <div class="phase"><b>PHASE 2</b><p><strong>Community:</strong> Grow the holder base, run community events, and collaborate with other Solana communities.</p></div>
+      <div class="phase"><b>PHASE 3</b><p><strong>Momentum:</strong> Creator outreach, stronger content, collaborations, and broader community marketing.</p></div>
+      <div class="phase"><b>PHASE 4</b><p><strong>Brand:</strong> Turn NCC into a recognizable meme identity with a community that keeps building.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap">
+    <div class="community">
+      <h2>JOIN THE CHUDS 🗿</h2>
+      <p>
+        Get announcements, memes, project updates, and community conversation.
+        NCC is being built from the ground up.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="https://t.me/niggachudcoin" target="_blank" rel="noopener">Join Telegram</a>
+        <a class="btn" href="https://x.com/niggachudcoin" target="_blank" rel="noopener">Follow on X</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>🗿 $NCC — THE CHUD HAS ARRIVED</div>
+    <p class="disclaimer">
+      NCC is a high-risk meme token. Nothing on this website is financial advice or a promise of returns.
+      Do your own research and only participate with funds you can afford to lose.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
